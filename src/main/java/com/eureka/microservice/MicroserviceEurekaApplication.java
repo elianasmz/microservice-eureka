@@ -10,13 +10,12 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableEurekaServer
 public class MicroserviceEurekaApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-        SpringApplication.run(MicroserviceEurekaApplication.class, args);
-	}
-
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        // Esto le dice a Tomcat cómo encontrar tu aplicación Spring
         return application.sources(MicroserviceEurekaApplication.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(MicroserviceEurekaApplication.class, args);
     }
 }
