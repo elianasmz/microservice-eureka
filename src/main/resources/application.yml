@@ -1,7 +1,7 @@
 server:
-  port: 9090
-  servlet:
-    context-path: /eureka
+  port: 8761
+#  servlet:
+#    context-path: /eureka
 
 spring:
   application:
@@ -18,7 +18,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:9090/eureka/
+      defaultZone: http://localhost:8761/eureka/
   
   server:
     enable-self-preservation: false
